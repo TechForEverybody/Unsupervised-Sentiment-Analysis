@@ -1,0 +1,94 @@
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    flex-wrap: wrap;
+}
+
+header h1{
+    color: #f5f6fa;
+}
+nav{
+    min-width: 200px;
+    display: flex;
+    justify-content: space-between;
+}
+
+section{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap:wrap-reverse;
+    align-items: center;
+    min-height: 85vh;
+    width: 90%;
+    margin:10px auto;
+    border-radius: 10px;
+}
+.outputSection{
+    min-width: 500px;
+    min-height: 60vh;
+    background-color: white;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.outputSection h2,.outputSection h3{
+    color: black;
+    text-align: center;
+    max-width: 380px;
+}
+
+#positiveResult,#nagativeResult,#neutralResult,#default{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display: none;
+}
+.emoji img{
+    max-width: 200px;
+}
+#default img{
+    max-width: 250px;
+}
+#default{
+    display: flex;
+}
+form{
+min-width: 300px;
+min-height: 500px;
+background-color: #9c88ff;
+border-radius: 10px;
+box-shadow: -5px 5px 10px  #3c6382;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+}
+form h2{
+    color: royalblue;
+}
+textarea{
+    margin: 30px 10px;
+    height: 120px;
+    width: 220px;
+    border-radius: 10px;
+    padding: 5px;
+    background: transparent;
+    text-decoration: underline;
+    font-size: 1.3em;
+    color: black;
+    font-weight: bolder;
+    overflow: hidden;
+    resize: none;
+}
+
+button{
+    margin: 10px;
+    padding: 10px 30px;
+    font-size: 1.2em;
+    background-color: coral;
+    border-radius: 10px;
+}

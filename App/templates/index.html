@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Unsupervised Sentiment_Analysis_System</title>
+		<link rel="stylesheet" href="../static/styles/Home.css" />
+		<link rel="stylesheet" href="../static/styles/Main.css" />
+		<link rel="stylesheet" href="{{url_for('static',filename='styles/Main.css')}}">
+		<link rel="stylesheet" href="{{url_for('static',filename='styles/Home.css')}}">
+		<script src="{{url_for('static',filename='scripts/index.js')}}"></script>
+	</head>
+	<body>
+		<header>
+			<h1>Unsupervised Sentiment Analysis System</h1>
+			<nav>
+				<a href="#about">About</a><a href="#analysis">Analysis</a>
+			</nav>
+		</header>
+		<hr />
+		<section>
+			<form onsubmit="getResult(event)">
+				<h2><i class="far fa-comment-alt"></i> Enter Your Sentiment</h2>
+				<textarea
+					name="input"
+					id="input"
+					placeholder="Enter Review.........." required
+				></textarea>
+				<button type="submit">Check Sentiment</button>
+			</form>
+			<div class="outputSection">
+				<div id="positiveResult">
+					<div class="emoji">
+						<img
+							src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmFTnkZJrixLb3T1FID3463dWSdqxHCczUNw&usqp=CAU"
+							alt=""
+						/>
+						<h2 id="class">Predicted Rating : ⭐</h2>
+						<h2 style="color: green">Good</h2>
+						<h3>It Looks Positive Review About Restaurant</h3>
+					</div>
+				</div>
+				<div id="nagativeResult">
+					<div class="emoji">
+						<img
+							src="https://ps.w.org/kk-star-ratings/assets/icon-256x256.jpg?rev=2140680"
+							alt=""
+						/>
+					</div>
+					<h2 id="rating">Predicted Rating : ⭐</h2>
+					<h2 style="color: red">Bad</h2>
+					<h3>It Looks Nagative Review About Restaurant</h3>
+				</div>
+				<div id="neutralResult">
+					<div class="emoji">
+						<img
+							src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaGFV3jff1BaOLPDbHQJ8b9Pw6pFzR6XOQ8g&usqp=CAU"
+							alt=""
+						/>
+					</div>
+					<h2 id="rating">Predicted Rating : ⭐</h2>
+					<h2 style="color: red">Neutral</h2>
+					<h3>It is not as per the sentiment </h3>
+					<h3>(हम पता नहीं कर पाए की आप क्या कहना चाहते हैं)</h3>
+				</div>
+				<div id="default">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaGFV3jff1BaOLPDbHQJ8b9Pw6pFzR6XOQ8g&usqp=CAU" alt="">
+                    <h2 style="color: gray">Rating ⭐</h2>
+					<h3>Based on the input, we will try to predict the sentiment behind the Review as Rating</h3>
+                </div>
+			</div>
+		</section>
+	</body>
+</html>
